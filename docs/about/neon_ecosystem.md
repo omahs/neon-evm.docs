@@ -1,5 +1,5 @@
 ---
-title: Neon ecosystem
+title: Neon Ecosystem
 proofedDate: 20230427
 iterationBy: HB
 includedInSite: true
@@ -15,15 +15,12 @@ comment: #1 TODO pls confirm Neon EVM interacts with Solana nodes (multiple) not
 
 **Neon EVM** is *the* solution that makes Solana's throughput, swift block speeds, and low gas prices available to Ethereum contracts. Neon EVM interacts directly with Solana nodes to carry out txs on Solana. The service is made up of three main components:
 
-- Neon DAO
 - Neon EVM
 - Neon Proxy
+- Neon DAO
 
-This page presents a high-level overview of each, and the native tools and integrations available within the Neon ecosystem.
+This page presents a high-level overview of each, and the native tools and integrations available within the Neon Ecosystem.
 
-## Neon DAO
-
-The DAO essentially owns the Neon EVM and is also a grant-issuing authority able to direct future research and development. The Neon DAO exists as a series of contracts deployed on Solana to provide a Layer 0 (L0: a social/governance layer) to control the functionality of Neon EVM. The DAO provides a web interface to allow the community, i.e. NEON holders, to raise and vote on proposals that impact the functioning of the Neon EVM.
 
 ## Neon EVM program
 
@@ -33,7 +30,12 @@ The **Neon EVM program** is a smart contract on the Solana blockchain. The Neon 
 
 ## Neon Proxy
 
-Neon Proxy is the "translator', an essential tool for packaging a Neon transaction into a Solana transaction. The proxy provides a containerized solution that's intuitive for [Operators](/docs/operating/overview/introduction) in the Neon ecosystem. It's the Neon Proxy that allows Ethereum dApps to be ported to Neon with virtually no code or configuration changes.
+Neon Proxy is the "translator', an essential tool for packaging a Neon transaction into a Solana transaction. The proxy provides a containerized solution that's intuitive for [Operators](/docs/operating/overview/introduction). It's the Neon Proxy that allows Ethereum dApps to be ported to Neon with minimal reconfiguration.
+
+<!-- Yuri -- does this hit the mark "minimal reconfiguration" ? -->
+
+> **Neon Operators** run Neon Proxy servers to facilitate the seamless execution of Ethereum-like transactions on Solana. It is this proxy service that allows Ethereum dApps to be ported to Neon with minimal reconfiguration. Operators accept payment in NEON and make payments within the Solana Ecosystem in SOL.
+
 
 ### The NEON Token
 
@@ -47,9 +49,9 @@ The Neon Proxy Operator accepts payment from the user in [NEON tokens](/docs/tok
 
 Owners of the Neon token may engage in the Neon DAO activities.
 
-### Neon Operators
+## Neon DAO
 
-**Neon Operators** run Neon Proxy servers to facilitate the seamless execution of Ethereum-like transactions on Solana. It is this proxy service that allows Ethereum dApps to be ported to Neon with no code changes. Operators accept payment in NEON and make payments within the Solana ecosystem in SOL.
+The DAO essentially owns the Neon EVM and is also a grant-issuing authority able to direct future research and development. The Neon DAO exists as a series of contracts deployed on Solana to provide a Layer 0 (L0: a social/governance layer) to control the functionality of Neon EVM. The DAO provides a web interface to allow the community, i.e. NEON holders, to raise and vote on proposals that impact the functioning of the Neon EVM.
 
 ## Neon Tools
 

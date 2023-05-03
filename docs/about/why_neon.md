@@ -17,7 +17,7 @@ Neon EVM is a fully compatible Ethereum environment solution built on the Solana
 
 Neon EVM enables Solidity- and Vyper-based dApps to tap into Solana’s network benefits: low fees, high transaction speeds, and parallel transaction execution capabilities.
 
-From a developer’s perspective, this means creating Solana-compatible contracts using tools you’re familiar with from the Ethereum ecosystem. 
+From a developer’s perspective, this means creating Solana-compatible contracts using tools you’re familiar with from the Ethereum Ecosystem. 
 
 Neon EVM makes the key Ethereum dApp tools compatible with Solana, including Vyper, Solidity, [MetaMask](/docs/wallet/metamask_setup), [Hardhat](/docs/developing/deploy_facilities/using_hardhat), [Truffle](/docs/developing/deploy_facilities/using_truffle), and [Remix](/docs/developing/deploy_facilities/using_remix). The solution allows any Ethereum application to run on Solana without any changes to its codebase, this includes Uniswap, SushiSwap, 0x, and MakerDAO. 
 
@@ -49,5 +49,5 @@ Solana offers developers:
 * Parallel execution of transactions (txs)
 * Low gas fees: 0.000015 SOL/tx
 * High transaction speed: 2,000+ tps
-* Access to the growing Solana ecosystem
+* Access to the growing Solana Ecosystem
 * Solana's consensus mechanism and state, with no additional validators
