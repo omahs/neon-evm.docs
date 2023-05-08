@@ -72,7 +72,7 @@ const sidebars = {
         'developing/integrate/protocols/integrating_walletconnect',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
-        'developing/integrate/wallets/integrating_metamask_into_your_dapp',
+        'developing/integrate/wallets/integrating_metamask_into_your_dapp'
       ]
     },
     {
@@ -108,15 +108,7 @@ const sidebars = {
           'about/how_it_works',
         ]
     },
-      {
-      type: 'doc',
-      id: 'architecture/neon_evm_arch'
-    },
-    {
-      type: 'doc',
-      id: 'architecture/eth_sol_solution'
-    },
-        {
+            {
       type: 'category',
       label: 'EVM Compatibility',
       items: [
@@ -125,6 +117,14 @@ const sidebars = {
         'evm_compatibility/opcodes'
 ,        'evm_compatibility/precompiles'
       ]
+    },
+      {
+      type: 'doc',
+      id: 'architecture/neon_evm_arch'
+    },
+    {
+      type: 'doc',
+      id: 'architecture/eth_sol_solution'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Operate</h4>' },
