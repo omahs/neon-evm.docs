@@ -7,7 +7,7 @@ approvedBy: na
 comments: 
 ---
 
-Neon EVM supports the majority of the [Ethereum OpCodes](https://ethereum.org/en/developers/docs/evm/opcodes/) verbatim. This page presents those OpCodes that are **not** supported verbatim as they're adapted for use in the Neon EVM.
+Neon EVM supports the majority of the [Ethereum OpCodes](https://ethereum.org/en/developers/docs/evm/opcodes/) verbatim. This page presents those OpCodes that are *not* supported verbatim as they're adapted for use in the Neon EVM.
 
 
 |Stack|Name|Description|
