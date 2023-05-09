@@ -9,6 +9,16 @@ const sidebars = {
       label: '🏓 Quick Start',
       id: 'quick_start'
     },
+     {
+      type: 'category',
+      label: '🧬 Neon EVM Overview',
+      items:
+        [
+          'about/why_neon',
+          'about/neon_ecosystem',
+          'about/how_it_works',
+        ]
+    },
     {
       type: 'doc',
       label: '🔑 Connect Wallet',
@@ -98,24 +108,14 @@ const sidebars = {
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
-        {
-      type: 'category',
-      label: '🧬 Neon EVM Overview',
-      items:
-        [
-          'about/why_neon',
-          'about/neon_ecosystem',
-          'about/how_it_works',
-        ]
-    },
-            {
+      {
       type: 'category',
       label: 'EVM Compatibility',
       items: [
         'evm_compatibility/overview',
         'evm_compatibility/json_rpc_api_methods',
-        'evm_compatibility/opcodes'
-,        'evm_compatibility/precompiles'
+        'evm_compatibility/opcodes',
+        'evm_compatibility/precompiles'
       ]
     },
       {
