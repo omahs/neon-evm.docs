@@ -1,5 +1,6 @@
 ---
 title: EVM Compatibility Overview
+comment: 404 on page -- see inline
 ---
 
 
@@ -58,6 +59,7 @@ Several Solana-specific differences also impact smart contract development.
 ### Upper limit on number of Accounts
 Neon EVM uses [Solana Transaction V2](https://docs.solana.com/proposals/transactions-v2): limiting the maximum number of accounts used in a single transaction to 64. Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions. 
 
+<<<<<<< HEAD
 <!-- go deeper on HOW to modify the contract to constrain account numbers Anton will pass in slack
  -->
 
@@ -74,6 +76,10 @@ To avoid the occurrence of a heap overflow error, it is recommended that you red
 <!-- Can we show logs ?screenshot and name of service? to demonstrate when the issue is heap size? == detection method ?? Oleg should be able to provide -->
 
 <!-- Support address?? IF users are experiencing such issues, reach out to Yuri sending address -->
+
+### Heap size
+Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB. Consequently, the size of the heap allocated to a contract call, is limited to the same 256 KB.
+>>>>>>> main
 
 
 ### Limitation on `block.timestamp` / `block.number` Usage
