@@ -157,7 +157,7 @@ const sidebars = {
     {
       type: 'doc',
       label: 'Overview',
-      id: 'governance/overview/overview'
+      id: 'governance/introduction'
     },
     {
       type: 'doc',
