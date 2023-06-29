@@ -95,8 +95,7 @@ const config = {
             items: [
               { label: 'BlockExplorer', to: 'https://neonscan.org/' },
               { label: 'NeonPass', to: 'https://neonpass.live/' },
-              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }            
-              { label: 'API', to: '/docs/api/delete-user' }            
+              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }                    
               ]
           },
           {
@@ -158,7 +157,12 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
-        }
+        },
+        pages: {
+          path: 'src/api-docs',
+          include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+          mdxPageComponent: '@theme/MDXPage',
+        },
       })
     ]
   ],
@@ -171,7 +175,7 @@ const config = {
         config: {
           petstore: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
             specPath: "src/specs/openapi.yaml", // Path to designated spec file
-            outputDir: "docs/api", // Output directory for generated .mdx docs
+            outputDir: "src/api-docs", // Output directory for generated .mdx docs
             sidebarOptions: {
               groupPathsBy: "tag",
             },

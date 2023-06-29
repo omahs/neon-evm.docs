@@ -55,7 +55,12 @@ const sidebars = {
       label: 'Connect to Neon RPC',
       id: 'developing/connect_rpc'
     },
-        {
+    {
+      type: 'doc',
+      label: 'API',
+      id: 'api/delete-user'
+    },
+     {
       type: 'doc',
       label: 'Request Test Tokens',
       id: 'developing/utilities/faucet'
