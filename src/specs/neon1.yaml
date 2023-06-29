@@ -1,0 +1,178 @@
+openapi: 3.0.3
+info:
+  title: Neon Specific API methods
+  description: |-
+    This is a specification of the Neon API methods written up as if it is a REST API that is compliant with the OpenAPI 3.0 specification. This is a hack to use the tooling available to render the spec as HTML. The intention is to imitate this tooling for our own purposes and remove the implication that this is a REST API.
+
+    The source of truth is [this Notion page](https://www.notion.so/neonlabs/Neon-Specific-API-methods-3402baaad8fa4daeb12642495cf85eb3)
+  termsOfService: wip
+  contact:
+    email: info@neonevm.org
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+externalDocs:
+  description: Find out more about Neon EVM
+  url: https://docs.neonfoundation.io/docs/quick_start
+servers:
+  - url: https://wip
+tags:
+  - name: Settings
+    description: This family of endpoints return production versions and EVM parameters.
+    # externalDocs:
+    #   description: IF docs provides a support page, can target that directly
+    #   url: https://docs.neonfoundation.io/docs/quick_start
+  - name: Transactions
+    description: This family of endpoints provide access to transaction-related data.
+ # externalDocs:
+    #   description: IF docs provides a support page, can target that directly
+    #   url: https://docs.neonfoundation.io/docs/quick_start
+paths:
+  /neon_proxyVersion:
+    post:
+      tags:
+        - Settings
+      summary: Get Neon Proxy version (with POST)
+      description: This endpoint returns the version of the Neon Proxy.
+      operationId: getProxyVersion
+      security:
+      # wip security to be defined: boilerplate retained
+        - petstore_auth:
+            - write:pets
+            - read:pets
+      requestBody:
+        description: Arguments to pass on request.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/proxy_version_request'
+      responses:
+        '200':
+          description: Success — version number returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/proxy_version_response'          
+        '400':
+          description: wip
+        '404':
+          description: wip
+        '405':
+          description: wip
+        '500':
+          description: wip
+  /neon_evmVersion:
+    post:
+      tags:
+        - Settings
+      summary: Get Neon EVM version (with POST)
+      description: This endpoint returns the version of the Neon EVM.
+      operationId: getEVMVersion
+      security:
+      # wip security to be defined: boilerplate retained
+        - petstore_auth:
+            - write:pets
+            - read:pets
+      requestBody:
+        description: Arguments to pass on request.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/proxy_version_request'
+      responses:
+        '200':
+          description: Success — version number returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/proxy_version_response'          
+        '400':
+          description: wip
+        '404':
+          description: wip
+        '405':
+          description: wip
+        '500':
+          description: wip
+components:
+  schemas:
+    jsonrpc:
+      type: number
+      description: Version of the rpc endpoint required. wip in rest this is usually part of the path, not the request.
+      format: float
+      example: 2.0
+    id:
+      type: string
+      example: "1"
+      description: wip id of the enduser - is this part of authentication?
+    proxy_version_request:
+      type: object
+      properties:
+        jsonrpc:
+          $ref: '#/components/schemas/jsonrpc'
+          required: true
+        id:
+          $ref: '#/components/schemas/id'
+          required: true
+        method:
+          type: string
+          example: "neon_proxyVersion"
+          description: wip this looks like redundancy IF the endpoint hit is only serving the version for the proxy OR there is no unique endpoint -- which means we can't hack Open API tooling.... could use oneOf -- but the UX will suck
+        params:
+          type: string
+          example: "wip"
+          description: wip what is this an array of -- may need this to be an object to string array?
+    proxy_version_response:
+      type: object
+      properties:
+        result:
+          type: string
+          example: "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae"
+          description: Version of the Neon Proxy and wip the commit hash for the contract's deployment wip ??.
+        jsonrpc:
+          $ref: '#/components/schemas/jsonrpc'
+        id:
+          $ref: '#/components/schemas/id'
+    evm_version_request:
+      type: object
+      properties:
+        jsonrpc:
+          $ref: '#/components/schemas/jsonrpc'
+        id:
+          $ref: '#/components/schemas/id'
+        method:
+          type: string
+          example: "neon_evmVersion"
+          description: wip this looks like redundancy IF the endpoint hit is only serving the version for the neon evm??.
+        params:
+          type: object
+          properties:
+            params:
+              type: string
+              example: "wip"
+          description: wip what is this an array of?
+    evm_version_response:
+      type: object
+      properties:
+        jsonrpc:
+          $ref: '#/components/schemas/jsonrpc'
+        id:
+          $ref: '#/components/schemas/id'
+        result:
+          type: string
+          example: "Neon/v0.15.13-9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a"
+          description: Version of the Neon Proxy and wip the commit hash for the contract's deployment wip ??.       
+  securitySchemes:
+    petstore_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://petstore3.swagger.io/oauth/authorize
+          scopes:
+            write:pets: modify pets in your account
+            read:pets: read your pets
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
