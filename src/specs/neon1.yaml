@@ -79,14 +79,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/proxy_version_request'
+              $ref: '#/components/schemas/evm_version_request'
       responses:
         '200':
           description: Success — version number returned
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/proxy_version_response'
+                $ref: '#/components/schemas/evm_version_response'
         '400':
           description: wip
         '404':
