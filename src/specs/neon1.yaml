@@ -16,7 +16,7 @@ externalDocs:
   description: Find out more about Neon EVM
   url: https://docs.neonfoundation.io/docs/quick_start
 servers:
-  - url: https://wip
+  - url: https://devnet.neonevm.org
 tags:
   - name: Settings
     description: This family of endpoints return production versions and EVM parameters.
@@ -29,7 +29,7 @@ tags:
     #   description: IF docs provides a support page, can target that directly
     #   url: https://docs.neonfoundation.io/docs/quick_start
 paths:
-  /neon_proxyVersion:
+  /#neon_proxyVersion:
     post:
       tags:
         - Settings
@@ -53,7 +53,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/proxy_version_response'          
+                $ref: '#/components/schemas/proxy_version_response'
         '400':
           description: wip
         '404':
@@ -62,7 +62,7 @@ paths:
           description: wip
         '500':
           description: wip
-  /neon_evmVersion:
+  /#neon_evmVersion:
     post:
       tags:
         - Settings
@@ -86,7 +86,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/proxy_version_response'          
+                $ref: '#/components/schemas/proxy_version_response'
         '400':
           description: wip
         '404':
@@ -120,8 +120,10 @@ components:
           example: "neon_proxyVersion"
           description: wip this looks like redundancy IF the endpoint hit is only serving the version for the proxy OR there is no unique endpoint -- which means we can't hack Open API tooling.... could use oneOf -- but the UX will suck
         params:
-          type: string
-          example: "wip"
+          type: array
+          example: []
+          items:
+            type: object
           description: wip what is this an array of -- may need this to be an object to string array?
     proxy_version_response:
       type: object
@@ -162,7 +164,7 @@ components:
         result:
           type: string
           example: "Neon/v0.15.13-9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a"
-          description: Version of the Neon Proxy and wip the commit hash for the contract's deployment wip ??.       
+          description: Version of the Neon Proxy and wip the commit hash for the contract's deployment wip ??.
   securitySchemes:
     petstore_auth:
       type: oauth2
