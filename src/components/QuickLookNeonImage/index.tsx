@@ -94,7 +94,7 @@ const items = [
         </li>
         <li>
           <Link className={'link'}
-                to={'/docs/developing/deploy_facilities/interacting_with_spl_tokens'}>
+                to={'/docs/developing/deploy_facilities/1interacting_with_spl_tokens'}>
             ERC-20 with SPL <LinkSvg className={'link-image'} />
           </Link> under the <br /> hood
         </li>

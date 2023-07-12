@@ -66,7 +66,7 @@ The DAO provides custodial services to Neon Foundation, assisting the foundation
 
 [NeonPass](https://devnet.neonpass.live/) transfers ERC-20 tokens between Solana and Neon EVM. The [ERC-20 SPL wrapper](/docs/developing/deploy_facilities/interacting_with_spl_tokens) makes such transfers possible via (non-custodial) wallets.
 
-> See the [NeonPass guide](/docs/token_transferring/neonpass_usage).
+> See the [NeonPass guide](/docs/token_transferring/1neonpass_usage).
 
 ### NeonFaucet
 
