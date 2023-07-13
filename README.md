@@ -29,7 +29,8 @@ This command generates static content into the `build` directory and can be serv
 
 ## Use single source content
 
-> I have not got this working yet
+> Both files must be .mdx (the single source item AND the file that imports the item)
+> See docs/tokens/gas_fees.mdx for a working example
 
 See [the docs](https://docusaurus.io/docs/next/markdown-features/react#markdown-and-jsx-interoperability)
 
@@ -60,7 +61,15 @@ Using the default location:
 2. Reference the image and the size required, e.g.
 `<img src={myimage} width="450" />`
 
-## QA layer: Vale
+## QA layer
+
+## External and internal links
+
+The repo provides a QA action run to build and validate the docs. This step includes verifying internal and external links.
+
+> To use links to internal pages such as Notion, that public users do not have access to (e.g. in the metadata), it is necessary to comment out the URL.
+
+## Vale
 
 Vale is a linting tool for spelling, grammar, and style.
 
@@ -74,7 +83,7 @@ This file is set to lint Markdown files, as per `[*.md]`.
 
 ### Linting
 
-Linting may either be local (with vale installed via the CLI), or on a webhook action in GitHub or the like. 
+Linting with Vale may either be local (with Vale installed via the CLI) or on a webhook action in GitHub or the like. 
 
 ### Local lint
 
@@ -96,4 +105,10 @@ You can either lint **all** Markdown files with `vale .`, or you can name a spec
 	*********
 </TabItem>
 </Tabs>
+
+### Code boilerplates
+
+[codesandbox](https://codesandbox.io/dashboard/recent?workspace=6715f772-9c64-4139-8c8d-a18fe3f51a91) setup for grammarly@neonlabs.org
+
+with authentication via [GitHub](https://github.com/anonNeon)
 

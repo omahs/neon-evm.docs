@@ -34,8 +34,8 @@ const sidebars = {
       label: '💰 Tokens',
       items: [
         'tokens/neon_token',
-        'tokens/gas_fees',
-        'tokens/token_list',
+        'tokens/gas_fees',      
+        'tokens/token_list'
       ]
     },
     {
@@ -58,12 +58,17 @@ const sidebars = {
     {
       type: 'doc',
       label: 'API',
-      id: 'api/delete-user'
+      id: 'api/master-page'
     },
      {
       type: 'doc',
       label: 'Request Test Tokens',
       id: 'developing/utilities/faucet'
+    },
+    {
+      type: 'doc',
+      label: 'Gasless transactions',
+      id: 'developing/gasless'
     },
     {
       type: 'category',
