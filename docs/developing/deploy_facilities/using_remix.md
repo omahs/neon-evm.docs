@@ -121,7 +121,7 @@ Fig. 7
 
 </div>
 
-### Step 5: Deploy a Smart Contract on Solana Devnet
+### Step 5: Deploy a Smart Contract on Neon Devnet
 In our case, there is only one smart contract to deploy, therefore it is automatically selected from the dropdown and Remix will automatically generate a transaction.  
 
 The `Account` field will display the amount in the wallet account. This data is taken from MetaMask.  
@@ -176,7 +176,7 @@ Fig. 12 — Final view of the Remix panel
 
 </div>
 
-Congratulations! You can now call methods of the helloWorld smart contract deployed on the Solana network. (Fig. 13 shows the result of your smart contract — the text string "Hello World!".)  
+Congratulations! You can now call methods of the helloWorld smart contract deployed on the Neon network. (Fig. 13 shows the result of your smart contract — the text string "Hello World!".)  
 
 <div className='neon-img-width-300' style={{textAlign: 'center'}}>
 
